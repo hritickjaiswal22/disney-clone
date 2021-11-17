@@ -7,3 +7,9 @@
     height: 2.5rem;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+}
