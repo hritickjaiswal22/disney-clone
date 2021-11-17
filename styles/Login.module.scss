@@ -1,0 +1,14 @@
+.main {
+  height: 100vh;
+  background-image: url(../public/images/login-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.container {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

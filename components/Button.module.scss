@@ -1,0 +1,25 @@
+@import "../utilities/colors.module.scss";
+
+.btn {
+  font-size: 2rem;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 2rem 7rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.btn--blue {
+  background-color: $button-blue;
+  color: $primary-text;
+  width: 95%;
+  padding: 2rem 3rem;
+
+  &:hover {
+    background-color: $button-light-blue;
+  }
+}
