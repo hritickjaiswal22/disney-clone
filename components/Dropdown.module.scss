@@ -1,0 +1,21 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: rgb(19, 19, 19);
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  font-size: 1.5rem;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}

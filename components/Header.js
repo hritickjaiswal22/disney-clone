@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { useDispatch } from "react-redux";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 import styles from "./Header.module.scss";
@@ -13,12 +18,15 @@ import seriesIcon from "../public/images/series-icon.svg";
 import movieIcon from "../public/images/movie-icon.svg";
 import Button from "./Button";
 import { saveUser } from "../slices/authSlice";
+import Dropdown from "./Dropdown";
+import UserAvatar from "./UserAvatar";
 
 function Header() {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   const dispatch = useDispatch();
   const router = useRouter();
+  const photo = useSelector((state) => state.authState.photo);
 
   const loginHandler = () => {
     signInWithPopup(auth, provider)
@@ -28,6 +36,16 @@ function Header() {
           saveUser({ photo: photoURL, name: displayName, email: email })
         );
         router.push("/home");
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const logoutHandler = () => {
+    console.log("LOGOUT");
+    signOut(auth)
+      .then(() => {
+        dispatch(saveUser({ photo: null, name: null, email: null }));
+        router.push("/");
       })
       .catch((error) => console.log(error));
   };
@@ -84,11 +102,17 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <Button
-        onClick={loginHandler}
-        content="LOGIN"
-        className="btn--transparent"
-      />
+      {photo ? (
+        <Dropdown onClick={logoutHandler}>
+          <UserAvatar photoURL={photo} />
+        </Dropdown>
+      ) : (
+        <Button
+          onClick={loginHandler}
+          content="LOGIN"
+          className="btn--transparent"
+        />
+      )}
     </header>
   );
 }
