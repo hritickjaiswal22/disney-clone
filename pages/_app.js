@@ -1,9 +1,11 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import { initializeApp } from "firebase/app";
+import { Provider } from "react-redux";
 
 import "../styles/globals.css";
 import { firebaseConfig } from "../firebase/firebaseConfig";
+import store from "../store/index";
 
 function MyApp({ Component, pageProps }) {
   initializeApp(firebaseConfig);
@@ -14,7 +16,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Disney+ clone using Next JS, React" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </Fragment>
   );
 }
