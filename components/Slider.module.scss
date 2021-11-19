@@ -1,0 +1,49 @@
+.carousel {
+  li {
+    button {
+      &::before {
+        font-size: 1rem;
+        color: white;
+      }
+    }
+  }
+
+  &__wrap {
+    position: relative;
+
+    span {
+      display: block !important;
+      color: white;
+      width: 95% !important;
+      margin: 3rem auto !important;
+      cursor: pointer;
+    }
+
+    a > span {
+      box-shadow: rgb(0 0 0 / 69%) 0 1.6rem 3rem -1rem,
+        rgb(0 0 0 / 73%) 0 1.6rem 1rem -1rem;
+    }
+  }
+}
+
+.carousel > button {
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:nth-of-type(1) {
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+  }
+
+  &:nth-of-type(2) {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+  }
+}
