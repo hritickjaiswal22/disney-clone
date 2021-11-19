@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.scss";
 import Slider from "../components/Slider";
+import Viewer from "../components/Viewer";
 
 function Home() {
   console.log(useSelector((state) => state.authState));
@@ -12,6 +13,7 @@ function Home() {
       <Header />
       <article className={styles.content}>
         <Slider />
+        <Viewer />
       </article>
     </main>
   );
