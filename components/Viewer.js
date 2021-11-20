@@ -13,18 +13,63 @@ function Viewer() {
     <section className={styles.container}>
       <div className={styles.container__item}>
         <Image src={disney} layout="fill" />
+        <video
+          className={styles.container__video}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="videos/disney.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className={styles.container__item}>
         <Image src={marvel} layout="fill" />
+        <video
+          className={styles.container__video}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="videos/marvel.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className={styles.container__item}>
         <Image src={national} layout="fill" />
+        <video
+          className={styles.container__video}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="videos/national-geographic.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className={styles.container__item}>
         <Image src={pixar} layout="fill" />
+        <video
+          className={styles.container__video}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="videos/pixar.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className={styles.container__item}>
         <Image src={starwars} layout="fill" />
+        <video
+          className={styles.container__video}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="videos/star-wars.mp4" type="video/mp4" />
+        </video>
       </div>
     </section>
   );
