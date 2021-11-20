@@ -34,3 +34,25 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+
+    &__item {
+      width: 95%;
+      display: block;
+      margin: 3rem auto;
+    }
+
+    &__item:last-child {
+      position: relative;
+      width: 95%;
+      left: 0;
+      bottom: 0;
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+}
