@@ -1,10 +1,6 @@
 .mainContent {
-  position: relative;
+  background-repeat: no-repeat;
   height: calc(100vh - 60px);
-  width: 100%;
-  z-index: -1;
-}
-
-.mainContent > span {
-  z-index: -1;
+  background-size: cover;
+  background-position: top left 70%;
 }

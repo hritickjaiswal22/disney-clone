@@ -11,8 +11,10 @@ function MovieDetails() {
   return (
     <main>
       <Header />
-      <article className={styles.mainContent}>
-        <Image src={movie.backgroundImg} layout="fill" alt="Background Image" />
+      <article
+        style={{ backgroundImage: "url(" + movie.backgroundImg + ")" }}
+        className={styles.mainContent}
+      >
         Hello
       </article>
     </main>
