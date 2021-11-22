@@ -18,4 +18,5 @@
 
 .dropdown:hover .dropdown__content {
   display: block;
+  z-index: 1;
 }

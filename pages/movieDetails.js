@@ -15,7 +15,13 @@ function MovieDetails() {
         style={{ backgroundImage: "url(" + movie.backgroundImg + ")" }}
         className={styles.mainContent}
       >
-        Hello
+        <div
+          className={`${styles.mainContent__imageTitleBox} ${styles.fromLeft}`}
+        >
+          <Image src={movie.titleImg} layout="fill" al4="Movie Title" />
+        </div>
+        <h2 className={styles.mainContent__metaData}>{movie.subTitle}</h2>
+        <p className={styles.mainContent__description}>{movie.description}</p>
       </article>
     </main>
   );
