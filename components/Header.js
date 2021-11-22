@@ -50,9 +50,19 @@ function Header() {
       .catch((error) => console.log(error));
   };
 
+  const routerHandler = () => {
+    router.push("/home");
+  };
+
   return (
     <header className={styles.header}>
-      <Image className={styles.logo} src={logo} width="70" height="40" />
+      <Image
+        onClick={routerHandler}
+        className={styles.logo}
+        src={logo}
+        width="70"
+        height="40"
+      />
       <nav className={styles.navbar}>
         <ul className={styles.navbar__list}>
           <li className={styles.navbar__listItem}>

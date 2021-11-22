@@ -6,6 +6,7 @@ import Image from "next/image";
 import scale from "../public/images/slider-scale.jpg";
 import badag from "../public/images/slider-badag.jpg";
 import scales from "../public/images/slider-scales.jpg";
+import badging from "../public/images/slider-badging.jpg";
 
 import styles from "./Slider.module.scss";
 
@@ -23,17 +24,22 @@ function Slider() {
       <Carousel className={styles.carousel} {...settings}>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={scales} />
+            <Image src={scales} alt="Slider Image" />
           </a>
         </div>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={badag} />
+            <Image src={badag} alt="Slider Image" />
           </a>
         </div>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={scale} />
+            <Image src={scale} alt="Slider Image" />
+          </a>
+        </div>
+        <div className={styles.carousel__wrap}>
+          <a className={styles.carousel__wrapHelper}>
+            <Image src={badging} alt="Slider Image" />
           </a>
         </div>
       </Carousel>
