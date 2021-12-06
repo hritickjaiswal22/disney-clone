@@ -82,3 +82,11 @@ function Home() {
 }
 
 export default Home;
+
+// export async function getStaticProps(context) {
+//   const response = await fetch("http://localhost:3000/api/moviesData");
+//   const data = await response.json();
+//   return {
+//     props: { data },
+//   };
+// }
