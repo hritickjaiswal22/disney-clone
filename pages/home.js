@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 import { useSelector } from "react-redux";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.scss";
@@ -7,17 +5,8 @@ import Slider from "../components/Slider";
 import Viewer from "../components/Viewer";
 import Recommends from "../components/Recommends";
 
-function Home() {
-  const [moviesData, setMoviesData] = useState({});
-
-  useEffect(async () => {
-    const response = await fetch("/api/moviesData");
-    const data = await response.json();
-    const { movies } = data;
-    setMoviesData(movies);
-  }, []);
-  console.log(useSelector((state) => state.authState));
-
+function Home({ moviesData }) {
+  moviesData = moviesData.movies;
   return (
     <main className={styles.main}>
       <Header />
@@ -83,10 +72,10 @@ function Home() {
 
 export default Home;
 
-// export async function getStaticProps(context) {
-//   const response = await fetch("http://localhost:3000/api/moviesData");
-//   const data = await response.json();
-//   return {
-//     props: { data },
-//   };
-// }
+export async function getStaticProps(context) {
+  const response = await fetch("https://jsonkeeper.com/b/2EUP");
+  const moviesData = await response.json();
+  return {
+    props: { moviesData },
+  };
+}

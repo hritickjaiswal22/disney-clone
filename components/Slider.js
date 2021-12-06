@@ -24,22 +24,22 @@ function Slider() {
       <Carousel className={styles.carousel} {...settings}>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={scales} alt="Slider Image" />
+            <Image priority={true} src={scales} alt="Slider Image" />
           </a>
         </div>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={badag} alt="Slider Image" />
+            <Image priority={true} src={badag} alt="Slider Image" />
           </a>
         </div>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={scale} alt="Slider Image" />
+            <Image priority={true} src={scale} alt="Slider Image" />
           </a>
         </div>
         <div className={styles.carousel__wrap}>
           <a className={styles.carousel__wrapHelper}>
-            <Image src={badging} alt="Slider Image" />
+            <Image priority={true} src={badging} alt="Slider Image" />
           </a>
         </div>
       </Carousel>
