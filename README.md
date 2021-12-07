@@ -7,6 +7,10 @@ A Disney+ clone using Next JS and firebase and all the styling was done from scr
 
 Deployed with the help of [Vercel](https://disney-clone-using-nextjs.vercel.app/) <- Live URL
 
+## Demo
+
+![c2885905-4283-485e-977c-f0f9374c59e6](https://user-images.githubusercontent.com/76635865/145019723-496173e1-ccc9-49da-ad24-bade293d84ce.png)
+
 
 ## Features
 
