@@ -7,7 +7,7 @@ import styles from "./Recommends.module.scss";
 import disney from "../public/images/viewers-disney.png";
 import { saveMovie } from "../slices/movieSlice";
 
-function Recommends({ title, movieList }) {
+function Recommends({ title, movieList, actualIndexes }) {
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -24,7 +24,9 @@ function Recommends({ title, movieList }) {
           ]
         )
       );
-      router.push("/movieDetails");
+      router.push(
+        `/movieDetails/${event.target.parentElement.parentElement.dataset.actualindex}`
+      );
     }
   };
 
@@ -32,7 +34,11 @@ function Recommends({ title, movieList }) {
     <section className={styles.recommendSection}>
       <h1 className={styles.title}>{title}</h1>
       <div onClick={selectHandler} className={styles.recommendsContainer}>
-        <div data-index="0" className={styles.recommendsContainer__item}>
+        <div
+          data-actualindex={actualIndexes[0]}
+          data-index="0"
+          className={styles.recommendsContainer__item}
+        >
           <Image
             className={styles.recommendsContainer__image}
             src={movieList ? movieList[0].cardImg : disney}
@@ -40,7 +46,11 @@ function Recommends({ title, movieList }) {
             alt={movieList ? movieList[0].title : ""}
           />
         </div>
-        <div data-index="1" className={styles.recommendsContainer__item}>
+        <div
+          data-actualindex={actualIndexes[1]}
+          data-index="1"
+          className={styles.recommendsContainer__item}
+        >
           <Image
             className={styles.recommendsContainer__image}
             src={movieList ? movieList[1].cardImg : disney}
@@ -48,7 +58,11 @@ function Recommends({ title, movieList }) {
             alt={movieList ? movieList[1].title : ""}
           />
         </div>
-        <div data-index="2" className={styles.recommendsContainer__item}>
+        <div
+          data-actualindex={actualIndexes[2]}
+          data-index="2"
+          className={styles.recommendsContainer__item}
+        >
           <Image
             className={styles.recommendsContainer__image}
             src={movieList ? movieList[2].cardImg : disney}
@@ -56,7 +70,11 @@ function Recommends({ title, movieList }) {
             alt={movieList ? movieList[2].title : ""}
           />
         </div>
-        <div data-index="3" className={styles.recommendsContainer__item}>
+        <div
+          data-actualindex={actualIndexes[3]}
+          data-index="3"
+          className={styles.recommendsContainer__item}
+        >
           <Image
             className={styles.recommendsContainer__image}
             src={movieList ? movieList[3].cardImg : disney}

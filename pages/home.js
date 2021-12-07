@@ -25,6 +25,7 @@ function Home({ moviesData }) {
               : null
           }
           title="Recommended for you"
+          actualIndexes={[1, 2, 3, 4]}
         />
         <Recommends
           movieList={
@@ -38,6 +39,7 @@ function Home({ moviesData }) {
               : null
           }
           title="New to Disney+"
+          actualIndexes={[5, 6, 7, 8]}
         />
         <Recommends
           movieList={
@@ -51,6 +53,7 @@ function Home({ moviesData }) {
               : null
           }
           title="Originals"
+          actualIndexes={[9, 10, 11, 12]}
         />
         <Recommends
           movieList={
@@ -64,6 +67,7 @@ function Home({ moviesData }) {
               : null
           }
           title="Trending"
+          actualIndexes={[13, 14, 15, 16]}
         />
       </article>
     </main>
