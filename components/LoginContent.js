@@ -11,7 +11,7 @@ function LoginContent() {
   return (
     <div className={styles.content}>
       <div className={styles.content__imageBox}>
-        <Image src={cta} alt="CTA logos" layout="fill" />
+        <Image priority={true} src={cta} alt="CTA logos" layout="fill" />
       </div>
       <Button content="GET ALL THERE" className="btn--blue" />
       <p className={styles.content__description}>
@@ -19,7 +19,7 @@ function LoginContent() {
         with Disney+ subscription.As of 26/3/21, the price of Dinsey+ and bundle
         will increase by $1.
       </p>
-      <div className={styles.content__imageBox2}>
+      <div priority={true} className={styles.content__imageBox2}>
         <Image src={cta2} alt="CTA logos" layout="fill" />
       </div>
     </div>
