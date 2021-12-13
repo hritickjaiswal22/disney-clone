@@ -24,6 +24,12 @@ Deployed with the help of [Vercel](https://disney-clone-using-nextjs.vercel.app/
 - Hooks 
 
 
+## Future Changes
+
+- Reducing the TTI and TBT for mobile devices.
+- Adding more animations and making it more interactive.
+
+
 ## Tech Stack
 
  React, Redux-Toolkit, Next JS, Firebase, SASS 
