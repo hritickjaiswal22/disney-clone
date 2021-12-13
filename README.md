@@ -11,6 +11,11 @@ Deployed with the help of [Vercel](https://disney-clone-using-nextjs.vercel.app/
 
 ![c2885905-4283-485e-977c-f0f9374c59e6](https://user-images.githubusercontent.com/76635865/145019723-496173e1-ccc9-49da-ad24-bade293d84ce.png)
 
+## Performance
+
+![Desktop Performance](https://user-images.githubusercontent.com/76635865/145760837-5224a888-4c8f-4189-88d5-6510c4a5ba8d.png)
+![Mobile Performance](https://user-images.githubusercontent.com/76635865/145760950-e1ce9cad-3538-4034-b450-d51f97392e7f.png)
+
 
 ## Features
 
